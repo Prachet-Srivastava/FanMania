@@ -1,13 +1,19 @@
-import { Avatar, AvatarGroup, Flex, VStack, Text,Button } from "@chakra-ui/react"
+import { Avatar, AvatarGroup, Flex, VStack, Text,Button, useDisclosure} from "@chakra-ui/react"
 import useUserProfileStore from "../../store/userProfileStore"
 import useAuthStore from "../../store/authStore";
+import EditProfile from "./EditProfile";
+import useFollowUser from "../../hooks/useFollowUser";
 
 
 const ProfileHeader = () => {
     const {userProfile}=useUserProfileStore();
     const authUser=useAuthStore(state=> state.user);
-    const visitingOwnProfileAndAuth=authUser && authUser.username === userProfile.username
-    const visitingAnotherProfileAndAuth=authUser && authUser.username !== userProfile.username
+    
+    const {isOpen, onOpen, onClose}= useDisclosure();
+    const {isFollowing, isUpdating,handleFollowUser} = useFollowUser(userProfile?.uid);
+    const visitingOwnProfileAndAuth=authUser && authUser.username === userProfile.username;
+    const visitingAnotherProfileAndAuth=authUser && authUser.username !== userProfile.username;
+
   return (
     <Flex gap={{base:4,sm:10}} py={10} direction={{base:"column",sm:"row"}}>
 
@@ -25,6 +31,7 @@ const ProfileHeader = () => {
 								color={"black"}
 								_hover={{ bg: "whiteAlpha.800" }}
 								size={{ base: "xs", md: "sm" }}
+                                onClick={onOpen}
 								
 							>
 								Edit Profile
@@ -39,9 +46,11 @@ const ProfileHeader = () => {
 								color={"white"}
 								_hover={{ bg: "blue.600" }}
 								size={{ base: "xs", md: "sm" }}
+                                onClick={handleFollowUser}
+                                isLoading={isUpdating}
 								
 							>
-								Follow
+								{isFollowing ? "UnFollow" : "Follow"}
 							</Button>
 						</Flex>
                         
@@ -77,6 +86,7 @@ const ProfileHeader = () => {
                         <Text fontSize={"sm"}  mr={1}>{userProfile.bio}</Text>
 
         </VStack>
+        {isOpen && <EditProfile  isOpen={isOpen} onClose={onClose} />}
     </Flex>
   )
 }
