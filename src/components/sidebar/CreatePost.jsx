@@ -30,6 +30,7 @@ import { addDoc, arrayUnion, collection, doc, updateDoc } from "firebase/firesto
 import { firestore, storage } from "../../firebase/firebase";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
 
+
 const CreatePost = () => {
     const {isOpen , onClose, onOpen} = useDisclosure();
     const [caption, setCaption]=useState('')
@@ -62,7 +63,7 @@ const CreatePost = () => {
 				
 				alignItems={"center"}
 				gap={4}
-				_hover={{ bg: "whiteAlpha.400" }}
+				_hover={{ bg: "whiteAlpha.400"  }}
 				borderRadius={6}
 				p={2}
 				w={{ base: 10, md: "full" }}
@@ -76,12 +77,14 @@ const CreatePost = () => {
         <Modal isOpen={isOpen} onClose={onClose} size='xl'>
 				<ModalOverlay />
 
-				<ModalContent bg={"black"} border={"1px solid gray"}>
+				<ModalContent bg={"#DEDEDE"} border={"1px solid gray"}>
 					<ModalHeader>Create Post</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody pb={6}>
 						<Textarea placeholder='Post caption...'
                         value={caption}
+						borderColor={"gray"}
+						_hover={{ borderColor: "black" }}
                         onChange={(e)=>setCaption(e.target.value)}
                         />
 
@@ -104,8 +107,8 @@ const CreatePost = () => {
                         )}
 					</ModalBody>
 
-					<ModalFooter>
-						<Button mr={3} onClick={handlePostCreation} isLoading={isLoading}>Post</Button>
+					<ModalFooter color={"red"}>
+						<Button mr={3} backgroundColor={"#E76F51"} _hover={{ bg: "#2A9D8F" }}  onClick={handlePostCreation} isLoading={isLoading}>Post</Button>
 					</ModalFooter>
 				</ModalContent>
 			</Modal> 

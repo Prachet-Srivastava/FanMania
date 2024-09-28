@@ -14,13 +14,11 @@ const FeedPosts = () => {
                  <SkeletonCircle size='10'/>
                  <VStack gap={2} alignItems={"flex-start"}>
                  <Skeleton height='10px' w={"200px"}/>
-                 
-
                  </VStack>
                 </Flex>
 
                 <Skeleton w={"full"}>
-                    <Box h={"400px"}>contents wrapped</Box>
+                    <Box h={"400px"} >contents wrapped</Box>
                 </Skeleton>
             </VStack>
         ))}

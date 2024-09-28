@@ -28,14 +28,14 @@ const MovieSearch = ({ onSearch }) => {
 
 return (
   <form onSubmit={handleSubmit} style={{ display: 'flex', alignItems: 'center' }}>
-    <input
-      type="text"
-      placeholder="Search for a movie or TV show"
-      value={query}
-      onChange={handleInputChange}
-      style={{ marginRight: '10px', width:"600px"}} // Add margin-right to the input field
-    />
-    <button type="submit">Search</button>
+    {/* <input
+      // type="text"
+      // placeholder="Search for a movie or TV show"
+      // value={query}
+      // onChange={handleInputChange}
+      // style={{ marginRight: '10px', width:"600px"}} // Add margin-right to the input field
+    /> */}
+    {/* <button type="submit">Search</button> */}
   </form>
 );
 }

@@ -20,3 +20,4 @@ const FeedPost = ({post}) => {
 };
 
 export default FeedPost
+

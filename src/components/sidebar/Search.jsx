@@ -46,6 +46,7 @@ import {Box,
  					_hover={{ bg: "whiteAlpha.400" }}
  					borderRadius={6}
  					p={2}
+					
  					w={{ base: 10, md: "full" }}
  					justifyContent={{ base: "center", md: "flex-start" }}
                     onClick={onOpen}
@@ -56,19 +57,19 @@ import {Box,
  			</Tooltip>
              <Modal isOpen={isOpen} onClose={onClose} motionPreset='slideInLeft'>
 				<ModalOverlay />
-                <ModalContent bg={"black"} border={"1px solid gray"} maxW={"400px"}>
-                    <ModalHeader>
+                <ModalContent bg={"#D9D9D9"} border={"1px solid gray"} maxW={"400px"}>
+                    <ModalHeader color={"#000000"}>
                         Search user
                     </ModalHeader>
                     <ModalCloseButton />
                     <ModalBody pb={6}>
                         <form onSubmit={handleSearchUser}>
                             <FormControl>
-                                <FormLabel>Username</FormLabel>
-                                <Input placeholder='asaprogrammer' ref={searchRef} />
+                                <FormLabel  >Username</FormLabel>
+                                <Input borderColor={"gray"} _hover={{ borderColor: "black" }} placeholder='Enter here' ref={searchRef} />
                             </FormControl>
                             <Flex w={"full"} justifyContent={"flex-end"}>
-								<Button type='submit' ml={"auto"} size={"sm"} my={4} isLoading={isLoading}>
+								<Button type='submit' bg={"#E76F51"} _hover={{bg: "#2A9D8F"}} ml={"auto"} size={"sm"} my={4} isLoading={isLoading}>
 									Search
 								</Button>
 							</Flex>

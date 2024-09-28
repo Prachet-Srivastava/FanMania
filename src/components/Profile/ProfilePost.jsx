@@ -72,6 +72,7 @@ const ProfilePost = ({post}) => {
 				border={"1px solid"}
 				borderColor={"whiteAlpha.300"}
 				position={"relative"}
+				
 				aspectRatio={1 / 1}
 				onClick={onOpen}
 				
@@ -84,22 +85,23 @@ const ProfilePost = ({post}) => {
 					left={0}
 					right={0}
 					bottom={0}
-					bg={"blackAlpha.700"}
+					 bg={"blackAlpha.700"}
+					// bg={"whiteAlpha.700"}
 					transition={"all 0.3s ease"}
 					zIndex={1}
 					justifyContent={"center"}
 				>
                  <Flex alignItems={"center"} justifyContent={"center"} gap={50}>
 						<Flex>
-							<AiFillHeart size={20} />
-							<Text fontWeight={"bold"} ml={2}>
+							<AiFillHeart size={20}  color="white"/>
+							<Text fontWeight={"bold"} color={"white"} ml={2}>
 								{post.likes.length}
 							</Text>
 						</Flex>
 
 						<Flex>
-							<FaComment size={20} />
-							<Text fontWeight={"bold"} ml={2}>
+							<FaComment size={20} color="white"/>
+							<Text fontWeight={"bold"} color={"white"} ml={2}>
 								{post.comments.length}
 							</Text>
 						</Flex>
@@ -118,7 +120,7 @@ const ProfilePost = ({post}) => {
 			
           
           <ModalCloseButton />
-          <ModalBody bg={"balck"} pb={5}>
+          <ModalBody bg={"#D9D9D9"} pb={5}>
 		  <Flex gap ="4" w={{ base: "90%" , sm: "70%" , md: "full"}}  mx={"auto"}
 		    maxH={"90vh"}
 			minH={"50vh"}
@@ -139,7 +141,7 @@ const ProfilePost = ({post}) => {
 
 				
 				<Flex alignItems={"center"} gap={4}>
-					<Avatar src={userProfile.profilePicURL} size={"sm"} name='As A Programmer' />
+					<Avatar src={userProfile.profilePicURL} size={"sm"} name='Search a User' />
 					<Text fontWeight={"bold"} fontSize={12}>
 						{userProfile.username}
 					</Text>

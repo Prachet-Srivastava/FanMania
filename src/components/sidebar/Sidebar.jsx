@@ -12,7 +12,7 @@ const Sidebar = () => {
 		<Box
 			height={"100vh"}
 			borderRight={"1px solid"}
-			borderColor={"whiteAlpha.300"}
+			borderColor={"gray.300"}
 			py={8}
 			position={"sticky"}
 			top={0}
@@ -54,7 +54,7 @@ const Sidebar = () => {
 						onClick={handleLogout}
 						alignItems={"center"}
 						gap={4}
-						_hover={{ bg: "whiteAlpha.400" }}
+						_hover={{ bg: "blue.100" }}
 						borderRadius={6}
 						p={2}
 						w={{ base: 10, md: "full" }}
@@ -65,6 +65,7 @@ const Sidebar = () => {
 						<Button
 							display={{ base: "none", md: "block" }}
 							variant={"ghost"}
+							color={"black"}
 							_hover={{ bg: "transparent" }}
 							isLoading={isLoggingOut}
 						>

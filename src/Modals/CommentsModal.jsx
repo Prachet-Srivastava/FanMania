@@ -36,35 +36,64 @@ const CommentsModal = ({ isOpen, onClose, post }) => {
 	}, [isOpen, post.comments.length]);
 
 	return (
+		// <Modal isOpen={isOpen} onClose={onClose} motionPreset='slideInLeft'>
+		// 	<ModalOverlay />
+		// 	<ModalContent bg={"black"} border={"1px solid gray"} maxW={"400px"}>
+		// 		<ModalHeader>Comments</ModalHeader>
+		// 		<ModalCloseButton />
+		// 		<ModalBody pb={6}>
+		// 			<Flex
+		// 				mb={4}
+		// 				gap={4}
+		// 				flexDir={"column"}
+		// 				maxH={"250px"}
+		// 				overflowY={"auto"}
+		// 				ref={commentsContainerRef}
+		// 			>
+		// 				{post.comments.map((comment, idx) => (
+		// 					<Comment key={idx} comment={comment} />
+		// 				))}
+		// 			</Flex>
+		// 			<form onSubmit={handleSubmitComment} style={{ marginTop: "2rem" }}>
+		// 				<Input placeholder='Comment' size={"sm"} ref={commentRef} />
+		// 				<Flex w={"full"} justifyContent={"flex-end"}>
+		// 					<Button type='submit' ml={"auto"} size={"sm"} my={4} isLoading={isCommenting}>
+		// 						Post
+		// 					</Button>
+		// 				</Flex>
+		// 			</form>
+		// 		</ModalBody>
+		// 	</ModalContent>
+		// </Modal>
 		<Modal isOpen={isOpen} onClose={onClose} motionPreset='slideInLeft'>
-			<ModalOverlay />
-			<ModalContent bg={"black"} border={"1px solid gray"} maxW={"400px"}>
-				<ModalHeader>Comments</ModalHeader>
-				<ModalCloseButton />
-				<ModalBody pb={6}>
-					<Flex
-						mb={4}
-						gap={4}
-						flexDir={"column"}
-						maxH={"250px"}
-						overflowY={"auto"}
-						ref={commentsContainerRef}
-					>
-						{post.comments.map((comment, idx) => (
-							<Comment key={idx} comment={comment} />
-						))}
-					</Flex>
-					<form onSubmit={handleSubmitComment} style={{ marginTop: "2rem" }}>
-						<Input placeholder='Comment' size={"sm"} ref={commentRef} />
-						<Flex w={"full"} justifyContent={"flex-end"}>
-							<Button type='submit' ml={"auto"} size={"sm"} my={4} isLoading={isCommenting}>
-								Post
-							</Button>
-						</Flex>
-					</form>
-				</ModalBody>
-			</ModalContent>
-		</Modal>
+		<ModalOverlay />
+		<ModalContent bg={'white'} border='1px solid gray' maxW='400px'>
+		  <ModalHeader>Comments</ModalHeader>
+		  <ModalCloseButton />
+		  <ModalBody pb={6}>
+			<Flex
+			  mb={4}
+			  gap={4}
+			  flexDir='column'
+			  maxH='250px'
+			  overflowY='auto'
+			  ref={commentsContainerRef}
+			>
+			  {post.comments.map((comment, idx) => (
+				<Comment key={idx} comment={comment} />
+			  ))}
+			</Flex>
+			<form onSubmit={handleSubmitComment} style={{ marginTop: '2rem' }}>
+			  <Input placeholder='Comment' size='sm' ref={commentRef} />
+			  <Flex w='full' justifyContent='flex-end'>
+				<Button type='submit' ml='auto' size='sm' my={4} isLoading={isCommenting}>
+				  Post
+				</Button>
+			  </Flex>
+			</form>
+		  </ModalBody>
+		</ModalContent>
+	  </Modal>
 	);
 };
 

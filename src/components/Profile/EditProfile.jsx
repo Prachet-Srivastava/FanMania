@@ -49,14 +49,14 @@ const EditProfile = ({ isOpen, onClose }) => {
 		<>
 			<Modal isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />
-				<ModalContent bg={"black"} boxShadow={"xl"} border={"1px solid gray"} mx={3}>
+				<ModalContent bg={"#D9D9D9"} boxShadow={"xl"} border={"1px solid gray"} mx={3}>
 					<ModalHeader />
 					<ModalCloseButton />
 					<ModalBody>
 						{/* Container Flex */}
 						<Flex bg={"black"}>
-							<Stack spacing={4} w={"full"} maxW={"md"} bg={"black"} p={6} my={0}>
-								<Heading lineHeight={1.1} fontSize={{ base: "2xl", sm: "3xl" }}>
+							<Stack spacing={4} w={"full"} maxW={"md"} bg={"#D9D9D9"} p={6} my={0}>
+								<Heading lineHeight={1.1} color={"black"} fontSize={{ base: "2xl", sm: "3xl" }}>
 									Edit Profile
 								</Heading>
 								<FormControl>
@@ -65,11 +65,11 @@ const EditProfile = ({ isOpen, onClose }) => {
 											<Avatar
 												size='xl'
 												src={selectedFile || authUser.profilePicURL}
-												border={"2px solid white "}
+												border={"2px solid black "}
 											/>
 										</Center>
 										<Center w='full'>
-											<Button w='full' onClick={() => fileRef.current.click()}>
+											<Button w='full' bg={"#E76F51"}  _hover={{bg: "#2A9D8F"}} onClick={() => fileRef.current.click()}>
 												Edit Profile Picture
 											</Button>
 										</Center>
@@ -80,6 +80,8 @@ const EditProfile = ({ isOpen, onClose }) => {
 								<FormControl>
 									<FormLabel fontSize={"sm"}>Full Name</FormLabel>
 									<Input
+										borderColor={"gray"}
+										_hover={{ borderColor: "black" }}
 										placeholder={"Full Name"}
 										size={"sm"}
 										type={"text"}
@@ -91,6 +93,8 @@ const EditProfile = ({ isOpen, onClose }) => {
 								<FormControl>
 									<FormLabel fontSize={"sm"}>Username</FormLabel>
 									<Input
+										borderColor={"gray"}
+										_hover={{ borderColor: "black" }}
 										placeholder={"Username"}
 										size={"sm"}
 										type={"text"}
@@ -102,6 +106,8 @@ const EditProfile = ({ isOpen, onClose }) => {
 								<FormControl>
 									<FormLabel fontSize={"sm"}>Bio</FormLabel>
 									<Input
+										borderColor={"gray"}
+										_hover={{ borderColor: "black" }}
 										placeholder={"Bio"}
 										size={"sm"}
 										type={"text"}

@@ -18,7 +18,7 @@ const ProfileHeader = () => {
     <Flex gap={{base:4,sm:10}} py={10} direction={{base:"column",sm:"row"}}>
 
         <AvatarGroup size={{base:"xl", md:"2xl"}} justifyContent={"center"} alignSelf={"flex-start"} mx={"auto"}>
-            <Avatar src={userProfile.profilePicURL} alt='As a programmer logo'/>
+            <Avatar src={userProfile.profilePicURL} alt='FanMania logo logo'/>
 
         </AvatarGroup>
         <VStack alignItems={"start"} gap={2} mx={"auto"} flex={1}>
@@ -27,9 +27,9 @@ const ProfileHeader = () => {
                 {visitingOwnProfileAndAuth && (
                 <Flex gap={4} alignItems={"center"} justifyContent={"center"}>
 							<Button
-								bg={"white"}
-								color={"black"}
-								_hover={{ bg: "whiteAlpha.800" }}
+								bg={"#E76F51"}
+								color={"white"}
+								_hover={{ bg: "#2A9D8F" }}
 								size={{ base: "xs", md: "sm" }}
                                 onClick={onOpen}
 								

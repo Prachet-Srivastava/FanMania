@@ -1,25 +1,50 @@
+import { BsCameraReels } from "react-icons/bs";
+
+// export const InstagramLogo = () => (
+// 	<svg
+// 		aria-label='Instagram'
+// 		color='rgb(0, 0, 0)'
+// 		fill='rgb(0, 0, 0)'
+// 		height='29'
+// 		role='img'
+// 		viewBox='32 4 113 32'
+// 		width='103'
+// 	>
+// 		<text
+//   x="30"
+//   y="30"
+//   fill="currentColor"
+//   fontSize="26"
+//   fontFamily="Poppins"
+// >
+//   FanMania
+// </text>
+// 	</svg>
+// );
+
 export const InstagramLogo = () => (
 	<svg
-		aria-label='Instagram'
-		color='rgb(245, 245, 245)'
-		fill='rgb(245, 245, 245)'
-		height='29'
-		role='img'
-		viewBox='32 4 113 32'
-		width='103'
+	  aria-label='Instagram'
+	  height='29'
+	  role='img'
+	  viewBox='0 0 150 32'
+	  width='150'
 	>
-		<text
-  x="30"
-  y="30"
-  fill="currentColor"
-  fontSize="26"
-  fontFamily="Poppins"
->
-  FanMania
-</text>
+	  <text
+		x='10'
+		y='30'
+		fontSize='36'
+		fontFamily='Poppins'
+		fill='rgb(0, 0, 0)'
+	  >
+		<tspan fill='#E76F51'>F</tspan>
+		an
+		<tspan fill='#F4A261'>M</tspan>
+		ania
+	  </text>
 	</svg>
-);
-
+  );
+  
 export const InstagramMobileLogo = () => (
 	 <svg
     aria-label="FanMania"
@@ -37,7 +62,7 @@ export const InstagramMobileLogo = () => (
 export const SearchLogo = () => (
 	<svg
 		aria-label='Search'
-		color='rgb(245, 245, 245)'
+		color='rgb(0, 0, 0)'
 		fill='rgb(245, 245, 245)'
 		height='24'
 		role='img'
@@ -125,8 +150,8 @@ export const ReelsLogo = () => (
 export const MessagesLogo = () => (
 	<svg
 		aria-label='Messenger'
-		color='rgb(245, 245, 245)'
-		fill='rgb(245, 245, 245)'
+		color='rgb(0, 0, 0)'
+		fill='rgb(0, 0, 0)'
 		height='24'
 		role='img'
 		viewBox='0 0 24 24'
@@ -149,13 +174,15 @@ export const MessagesLogo = () => (
 export const NotificationsLogo = () => (
 	<svg
 		aria-label='Notifications'
-		color='rgb(245, 245, 245)'
-		fill='rgb(245, 245, 245)'
+		color='rgb(0, 0, 0)'
+		fill='rgb(0, 0, 0)'
 		height='24'
 		role='img'
 		viewBox='0 0 24 24'
 		width='24'
-	>
+	>   
+	      {/* <path d="M16 3.75a.75.75 0 00-1.136-.643L11 5.425V4.75A1.75 1.75 0 009.25 3h-7.5A1.75 1.75 0 000 4.75v6.5C0 12.216.784 13 1.75 13h7.5A1.75 1.75 0 0011 11.25v-.675l3.864 2.318A.75.75 0 0016 12.25v-8.5zm-5 5.075l3.5 2.1v-5.85l-3.5 2.1v1.65zM9.5 6.75v-2a.25.25 0 00-.25-.25h-7.5a.25.25 0 00-.25.25v6.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-4.5z" */}
+      {/* /> */}
 		<path d='M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z'></path>
 	</svg>
 );
@@ -178,8 +205,8 @@ export const UnlikeLogo = () => (
 export const CreatePostLogo = () => (
 	<svg
 		aria-label='New post'
-		color='rgb(245, 245, 245)'
-		fill='rgb(245, 245, 245)'
+		color='rgb(0, 0, 0)'
+		fill='rgb(0, 0, 0)'
 		height='24'
 		role='img'
 		viewBox='0 0 24 24'
@@ -221,8 +248,8 @@ export const CreatePostLogo = () => (
 export const CommentLogo = () => (
 	<svg
 		aria-label='Comment'
-		color='rgb(245, 245, 245)'
-		fill='rgb(245, 245, 245)'
+		color='rgb(0, 0, 0)'
+		fill='rgb(0, 0, 0)'
 		height='24'
 		role='img'
 		viewBox='0 0 24 24'

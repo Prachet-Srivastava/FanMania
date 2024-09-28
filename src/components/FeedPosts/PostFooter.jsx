@@ -78,26 +78,52 @@ const PostFooter = ({post, isProfilePage,creatorProfile}) => {
    w={"full"}
    >
     <InputGroup>
-    <Input variant = {"flushed"} 
-    placeholder={"Add a comment...."}
+    <Input 
+    // variant = {"flushed"} 
+    // placeholder={"Add a comment...."}
+    // fontSize={14}
+    // onChange={(e) => setComment(e.target.value)}
+    // value={comment}
+    // ref={commentRef}
+    variant="flushed"
+    placeholder="Add a comment...."
     fontSize={14}
     onChange={(e) => setComment(e.target.value)}
     value={comment}
     ref={commentRef}
+    placeholderProps={{ style: { color: "black" } }} 
     />
     <InputRightElement>
+{/*     
     <Button 
+        px={10} 
     fontSize={14}
-    color={"blue.500"}
+    bg={"blue.500"}
     fontWeight={600}
     cursor={"pointer"}
-    _hover={{color: "white"}}
-    bg={"transparent"}
+    _hover={{bg: "blue.400"}}
+    // bg={"transparent"}
     onClick={handleSubmitComment}
     isLoading={isCommenting}
+    
     >
         Post
-    </Button>
+    </Button> */}
+
+<Text
+    px={10} 
+    fontSize={14}
+    color={"blue.500"} // Setting the color to blue
+    fontWeight={600}
+    cursor={"pointer"}
+    _hover={{color: "blue.400"}} // Changing color on hover
+    onClick={handleSubmitComment}
+    isLoading={isCommenting}
+>
+    Post
+</Text>
+
+
     </InputRightElement>
     </InputGroup>
 

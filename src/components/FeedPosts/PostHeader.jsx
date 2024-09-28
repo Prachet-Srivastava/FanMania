@@ -38,7 +38,7 @@ const PostHeader = ({ post, creatorProfile}) => {
         color={"blue.500"}
         fontWeight={"bold"}
         _hover={{
-            color: "white",
+            color: "red",
         }}
         transition={"0.2s ease-in-out"}
         onClick={handleFollowUser}

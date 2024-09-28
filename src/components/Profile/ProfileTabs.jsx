@@ -4,7 +4,7 @@ import {BsGrid3X3,  BsBookmark, BsSuitHeart } from 'react-icons/bs';
 const ProfileTabs = () => {
   return (
     <Flex w={"full"} justifyContent={"center"} gap={{base:4,sm:10}} textTransform={"uppercase"} fontWeight={"bold"}>
-        <Flex borderTop={"1px solid white"} alignItems={"center"} p='3' gap={1} cursor={"pointer"}>
+        <Flex borderTop={"1px solid gray"} alignItems={"center"} p='3' gap={1} cursor={"pointer"}>
 				<Box fontSize={20}>
 					<BsGrid3X3 />
 				</Box>
@@ -13,7 +13,7 @@ const ProfileTabs = () => {
 				</Text>
 			</Flex>
 
-            <Flex alignItems={"center"} p='3' gap={1} cursor={"pointer"}>
+            {/* <Flex alignItems={"center"} p='3' gap={1} cursor={"pointer"}>
 				<Box fontSize={20}>
 					<BsBookmark />
 				</Box>
@@ -28,7 +28,7 @@ const ProfileTabs = () => {
 				<Text fontSize={12} display={{ base: "none", sm: "block" }}>
 					Likes
 				</Text>
-			</Flex>
+			</Flex> */}
 
     </Flex>
   )

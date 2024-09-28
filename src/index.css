@@ -12,3 +12,17 @@
  ::-webkit-scrollbar-thumb:hover{
     background: #555;
  }
+
+
+ ::placeholder {
+   color: black;
+}
+ 
+/* Global CSS rule for input placeholders */
+input::placeholder {
+   color: black; /* Set placeholder text color to black */
+ }
+ 
+textarea::placeholder {
+   color: black;
+}
